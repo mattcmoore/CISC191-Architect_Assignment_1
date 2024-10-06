@@ -7,6 +7,7 @@ public class CustomerResponse {
     private Integer id;
     private String firstName;
     private String lastName;
+    private String serverResposne;
 
     @JsonIgnore
     private static final ObjectMapper objectMapper = new ObjectMapper();
@@ -41,6 +42,14 @@ public class CustomerResponse {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getServerResposne() {
+        return serverResposne;
+    }
+
+    public void setServerResposne(String serverResposne) {
+        this.serverResposne = serverResposne;
     }
 
     public void setId(Integer id) {

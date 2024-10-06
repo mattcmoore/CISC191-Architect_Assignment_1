@@ -8,14 +8,13 @@
         <artifactId>FinalProject</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>Client</artifactId>
+    <artifactId>Server</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>edu.sdccd.cisc191.template</groupId>
             <artifactId>Common</artifactId>
             <version>${project.version}</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -58,7 +57,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>edu.sdccd.cisc191.template.ClientGUI</mainClass>
+                                    <mainClass>edu.sdccd.cisc191.template.Server</mainClass>
                                 </transformer>
                             </transformers>
                             <filters>
