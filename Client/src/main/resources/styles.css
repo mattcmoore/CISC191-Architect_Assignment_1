@@ -1,0 +1,30 @@
+/* Client/src/main/resources/styles.css */
+
+.root {
+    -fx-font-family: Arial;
+    -fx-padding: 10;
+}
+
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.text-field, .password-field {
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 4;
+    -fx-padding: 5;
+}
+
+.list-view {
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 4;
+}
+
+.label {
+    -fx-text-fill: red;
+}
