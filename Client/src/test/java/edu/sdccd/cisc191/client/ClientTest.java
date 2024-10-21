@@ -78,6 +78,7 @@ class ClientTest {
 
     @Test
     void testReceiveEmptyMessage() throws IOException {
+
         // Simulate the server sending an empty message
         serverWriter.write("");
         serverWriter.newLine();
@@ -112,6 +113,9 @@ class ClientTest {
 
     @Test
     void testReceiveMessage() throws IOException {
+
+        /** Proves network communication from server to client, a given message gets a certain response from server */
+
         // Prepare a message to simulate receiving from the server
         Message expectedMessage = new Message("TEST_ACTION", "Test Data");
         String jsonResponse = objectMapper.writeValueAsString(expectedMessage);

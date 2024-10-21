@@ -232,8 +232,9 @@ public class TaskController {
         item.setExpanded(true);
         for (Task subTask : task.getSubTasks()) {
             item.getChildren().add(createTreeItem(subTask));
+        } if(item != null) {
+            return item;
         }
-        return item;
     }
 
     /**
