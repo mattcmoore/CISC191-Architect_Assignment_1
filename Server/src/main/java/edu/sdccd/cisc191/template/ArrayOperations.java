@@ -8,10 +8,11 @@ class ArrayOperations implements Serializable {
     private int[] array; // Example array for demonstration
     private int size;
 
-    private ArrayOperations() {
+    protected ArrayOperations() {
         // Initialize array and size
         this.array = new int[10];
-        this.size = 0;
+//        this.size = 0;
+        this.size = array.length;
     }
 
     public static ArrayOperations getInstance() {
@@ -43,7 +44,8 @@ class ArrayOperations implements Serializable {
 
     public synchronized int[] printAll() {
         // Return all values
-        return Arrays.copyOf(array, size);
+
+        return Arrays.copyOf(array,array.length);
     }
 
     public synchronized void deleteAtIndex(int index) {
@@ -65,12 +67,13 @@ class ArrayOperations implements Serializable {
 
     public synchronized void shrinkArray() {
         // Shrink the array
-        if (size < array.length / 2) {
+        if (array.length / 2 > 0) {
             int[] newArray = new int[array.length / 2];
-            System.arraycopy(array, 0, newArray, 0, size);
+            System.arraycopy(array, 0, newArray, 0, array.length/2);
             array = newArray;
         } else {
             throw new IllegalStateException("Cannot shrink array, size is too large.");
         }
     }
+
 }
