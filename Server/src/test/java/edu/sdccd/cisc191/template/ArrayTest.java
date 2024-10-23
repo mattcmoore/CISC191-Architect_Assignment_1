@@ -3,12 +3,10 @@ package edu.sdccd.cisc191.template;
 
 
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ServerTest {
+public class ArrayTest {
 //   expand, shrink
     ArrayOperations testInstance = ArrayOperations.getInstance();
 
@@ -22,10 +20,10 @@ public class ServerTest {
     public void testSetAtIndex(){
         ArrayOperations testInstance = new ArrayOperations();
         String result = Arrays.toString(testInstance.printAll());
-        System.out.println(result);
-//        testInstance.setAtIndex(9,11);
+//        System.out.println(result);
+        testInstance.setAtIndex(9,11);
 
-//        assertEquals(testInstance.getAtIndex(9),11);
+        assertEquals(testInstance.getAtIndex(9),11);
     }
 
     @Test
@@ -43,14 +41,11 @@ public class ServerTest {
 
     }
 
-    //not working
     @Test
     public void deleteAtIndex(){
         ArrayOperations testInstance = ArrayOperations.getInstance();
         testInstance.setAtIndex(5,11);
         testInstance.deleteAtIndex(0);
-//        System.out.print(Arrays.toString(testInstance.printAll()));
-//        assertEquals(testInstance.printAll().length,9);
         assertFalse(testInstance.getAtIndex(9) == 11);
     }
 
